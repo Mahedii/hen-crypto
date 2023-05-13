@@ -364,7 +364,8 @@
                                     "render": function(data, type, row, meta) {
                                         return meta.row + 1;
                                     }
-                                }
+                                },
+                                { "targets": [0, 4], "orderable": false }
                             ],
                             "createdRow": function(row, data, dataIndex) {
                                 $(row).attr("data-row-id", data.SYMBOL);
@@ -444,10 +445,6 @@
                                 data:{symbol:symbol,cmcID:cmcID,action:"addCoinMarketCapCoin"},
                                 success:function(data) {
 
-                                    trObj.remove();
-                                    $("#msg").removeClass('alert-danger');
-                                    $("#msg").addClass('alert-success').html("Coin " +symbol+" has been added successfully.");
-
                                     var jsonData = JSON.parse(data);
 
                                     if (jsonData.status == "error"){
@@ -455,7 +452,11 @@
                                         $("#msg").removeClass('alert-success');
                                         $("#msg").addClass('alert-danger').html("Coin " +symbol+" already in the list.");     
                                     }
-                                    
+                                    else{
+                                        trObj.remove();
+                                        $("#msg").removeClass('alert-danger');
+                                        $("#msg").addClass('alert-success').html("Coin " +symbol+" has been added successfully.");
+                                    }  
                                     
                                 }
                             });

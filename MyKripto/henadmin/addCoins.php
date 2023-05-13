@@ -21,9 +21,10 @@
         include "layouts/connection.php";
         $_SESSION['test'] = 1;
         $COIN_SYMBOL  = $_POST['symbol'];
+        $COINMARKETCAP_ID  = $_POST['cmcID'];
 
-
-        $userData = array('COIN_SYMBOL' => $COIN_SYMBOL);
+        $userData = array('COINMARKETCAP_ID' => $COINMARKETCAP_ID, 'COIN_SYMBOL' => $COIN_SYMBOL);
+        $userData1 = array('COIN_SYMBOL' => $COIN_SYMBOL);
 
         $query = mysqli_query($pdo,"SELECT * FROM cmc_kry_my_munte WHERE COIN_SYMBOL =  '$COIN_SYMBOL' ");
         $count = mysqli_num_rows($query);
@@ -37,7 +38,7 @@
 
             if($count1 == 0){
                 
-                $insertQuery1 = $db->insert($tblName1, $userData);
+                $insertQuery1 = $db->insert($tblName1, $userData1);
             }
 
             $status = "ok";

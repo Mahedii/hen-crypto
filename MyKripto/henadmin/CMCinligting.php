@@ -1,6 +1,19 @@
 <?php include 'layouts/session.php'; ?>
 <?php include 'layouts/head-main.php'; ?>
 
+<?php
+
+    if (isset($_GET['DELETE_COIN_SYMBOL'])) {
+
+        $COIN_SYMBOL = $_GET['DELETE_COIN_SYMBOL'];
+
+        $deleteSql = mysqli_query($pdo,"DELETE FROM cmc_my_munte WHERE COIN_SYMBOL = '$COIN_SYMBOL' "); 
+        $deleteSql = mysqli_query($pdo,"DELETE FROM cmc_kry_my_munte WHERE COIN_SYMBOL = '$COIN_SYMBOL' "); 
+
+    }
+
+?>
+
 <head>
 
     <title>Admin Dashboard</title>
@@ -61,86 +74,85 @@
                                     style="width:100%">
                                     <thead>
                                         <tr>
-                                            <th>Munt No</th>
-                                            <th>Munt ID</th>
-                                            <th>Munt Simbool</th>
-                                            <th>Munt Naam</th>
-                                            <th>Munt</th>
+                                            <th>MUNT ID</th>
+                                            <th>TOTALE MUNTE</th>
+                                            <th>ADRES</th>
+                                            <th>GRAFIEK</th>
+                                            <th>BESTAAN MUNT NOG</th>
+                                            <th>SKAKEL</th>
+                                            <th>MUNT SKAKEL</th>
+                                            <th>BLOKKETTING</th>
+                                            <th>WAAR</th>
+                                            <th>BEURSIE_NO</th>
+                                            <th>BEURSIE</th>
+                                            <th>GEVERIFIEER</th>
+                                            <th>DATUM GEKOOP</th>
+                                            <th>AKSIE</th>
                                         </tr>
                                     </thead>
                                     <tbody>
 
                                         <?php
 
-                                            $result = mysqli_query($pdo, " SELECT * FROM cmc_munt_lys ORDER BY ID ASC ");
+                                            $result = mysqli_query($pdo, " SELECT * FROM cmc_my_munte ORDER BY ID DESC ");
                                             $row = mysqli_fetch_array($result);
+                                            $rowCount = mysqli_num_rows($result);
                                             $i = 1;
 
-                                            do { ?> 
+                                            if($rowCount>0){
+                                                do { ?> 
 
-                                                <tr>
-                                                    <td><?php echo $i; ?></td>
-                                                    <td><?php echo $row["COINMARKETCAP_ID"]; ?></td>
-                                                    <td><?php echo $row["SYMBOL"]; ?></td>
-                                                    <td><?php echo $row["COIN_NAME"]; ?></td>
-                                                    <td><?php echo $row["SLUG"]; ?></td>
-                                                </tr>
+                                                    <tr>
+                                                        <td><?php echo $row["COIN_SYMBOL"]; ?></td>
+                                                        <td><?php echo $row["TOTAL_COIN"]; ?></td>
+                                                        <td><?php echo $row["ADDRESS"]; ?></td>
+                                                        <td><?php echo $row["CHART"]; ?></td>
+                                                        <td><?php echo $row["DEAD1"]; ?></td>
+                                                        <td><?php echo $row["LINK"]; ?></td>
+                                                        <td><?php echo $row["SITE"]; ?></td>
+                                                        <td><?php echo $row["BLOCKCHAIN"]; ?></td>
+                                                        <td><?php echo $row["WHERE_NOW"]; ?></td>
+                                                        <td><?php echo $row["WALLET_NO"]; ?></td>
+                                                        <td><?php echo $row["WALLET"]; ?></td>
+                                                        <td><?php echo $row["VERIFIED"]; ?></td>
+                                                        <td><?php echo $row["CREATED_AT"]; ?></td>
+                                                        <td>
+                                                            <div class="dropdown d-inline-block">
+                                                                <button class="btn btn-soft-secondary btn-sm dropdown" type="button"
+                                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                                    <i class="ri-more-fill align-middle"></i>
+                                                                </button>
+                                                                <ul class="dropdown-menu dropdown-menu-end">
+                                                                    <!-- <li>
+                                                                        <a target="_blank" href="" class="dropdown-item">
+                                                                            <i class="ri-eye-fill align-bottom me-2 text-muted"></i>View
+                                                                        </a>
+                                                                    </li> -->
+                                                                    <li>
+                                                                        <a href="CMCverander.php?COIN_SYMBOL=<?php echo $row["COIN_SYMBOL"];?>" class="dropdown-item edit-item-btn">
+                                                                            <i class="ri-pencil-fill align-bottom me-2 text-muted"></i>Edit
+                                                                        </a>
+                                                                    </li>
+                                                                    <li>
+                                                                        <a class="dropdown-item remove-item-btn delete-row tooltips" href="CMCinligting.php?DELETE_COIN_SYMBOL=<?php echo $row["COIN_SYMBOL"];?>" onclick="return confirm('Is jy seker jy wil <?php echo $row['COIN_SYMBOL'];?> munt verwyder?')" data-toggle="tooltip" title="Delete">
+                                                                            <i class="ri-delete-bin-fill align-bottom me-2 text-muted"></i>Delete
+                                                                        </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
 
-                                                <?php 
+                                                    <?php 
 
-                                                $i++;
+                                                    $i++;
 
-                                            } while ($row = mysqli_fetch_array($result)); 
+                                                } while ($row = mysqli_fetch_array($result)); 
+                                            }
                                             
                                         ?>
 
                                     </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="col-lg-12">
-                        <div class="card">
-                            <div class="card-header">
-                                <h5 class="card-title mb-0">Geldeenheid Kodes</h5>
-                            </div>
-                            <div class="card-body">
-                                <table id="buttons-datatables" class="display table table-bordered" style="width:100%">
-                                    <thead>
-                                        <tr>
-                                            <th>Geldeenheid No</th>
-                                            <th>Geldeenheid Kode</th>
-                                            <th>Land</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-
-                                        <?php
-
-                                            $result1 = mysqli_query($pdo, " SELECT * FROM currency_codes ORDER BY ID ASC ");
-                                            $row1 = mysqli_fetch_array($result1);
-                                            $j = 1;
-
-                                            do { ?> 
-
-                                                <tr>
-                                                    <td><?php echo $j; ?></td>
-                                                    <td><?php echo $row1["CODE"]; ?></td>
-                                                    <td><?php echo $row1["COUNTRY"]; ?></td>
-                                                    
-                                                </tr>
-
-                                                <?php 
-
-                                                $j++;
-
-                                            } while ($row1 = mysqli_fetch_array($result1)); 
-                                        ?>
-
                                 </table>
                             </div>
                         </div>

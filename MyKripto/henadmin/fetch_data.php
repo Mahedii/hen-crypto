@@ -43,13 +43,13 @@
     else if ($token == "CMCvoegmunteby_cml_data"){
 
         // Build the SQL query based on the request parameters
-        $sql = " SELECT cml.* FROM cmc_munt_lys cml WHERE ID 
-        NOT IN(SELECT COINMARKETCAP_ID FROM cmc_kry_my_munte)";
+        // $sql = " SELECT cml.* FROM cmc_munt_lys cml WHERE cml.ID NOT IN(SELECT COINMARKETCAP_ID FROM cmc_kry_my_munte) ";
+        $sql = " SELECT cml.* FROM cmc_munt_lys cml ";
         $totalRecords = $pdo->query($sql)->rowCount(); // Total number of records (before filtering)
 
         // Add search and filter conditions if a search keyword is provided
         if (!empty($searchValue)) {
-            $sql .= " OR COINMARKETCAP_ID LIKE :search OR SYMBOL LIKE :search OR COIN_NAME LIKE :search"; // Adjust column names as per your table structure
+            $sql .= " WHERE COINMARKETCAP_ID LIKE :search OR SYMBOL LIKE :search OR COIN_NAME LIKE :search"; // Adjust column names as per your table structure
         }
 
         // Add sorting condition
