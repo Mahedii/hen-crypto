@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+#bottom-left-div {
+               
+               text-align: center; */
+               
+                position: absolute;  /* Gebruik dit om iets te plaas waar jy dit wil he.  Hierdie een is die belanrikste  */
+                bottom: 20px;        /* Gebruik dit om iets te plaas waar jy dit wil he. */
+				left: 100px;         /* Gebruik dit om iets te plaas waar jy dit wil he. */
+				display: flex;
+				align-items: center;
+				justify-content: center; 
+				box-sizing: border-box;
+				margin: 0;
+	            padding: 0;
+	            box-sizing: border-box;
+	            font-family: 'Poppins', sans-serif;
+}
+
+
+#bottom-left-div1 {
+               
+             
+             
+                position: absolute;  /* Gebruik dit om iets te plaas waar jy dit wil he.  Hierdie een is die belanrikste  */
+                bottom: 525px;        /* Gebruik dit om iets te plaas waar jy dit wil he. */
+				left: 1200px;         /* Gebruik dit om iets te plaas waar jy dit wil he. */
+				
+				
+				
+}
+
+#bottom-left-div2 {
+               
+             
+             
+                position: absolute;  /* Gebruik dit om iets te plaas waar jy dit wil he.  Hierdie een is die belanrikste  */
+                bottom: 190px;        /* Gebruik dit om iets te plaas waar jy dit wil he. */
+				left: 2000px;         /* Gebruik dit om iets te plaas waar jy dit wil he. */
+				
+				
+				
+}
+
+
+section 
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+
+}
+.box1
+{
+	position: relative;
+}
+.container
+{
+	position: relative;
+	min-width: 400px;
+	border-radius: 10px;
+	background: #e0d6ff;
+}
+#dycalendar 
+{
+	width: 90%;
+	padding: 30px 30px 0;
+}
+#dycalendar table 
+{
+	width: 100%;
+	border-spacing: 20px;
+	margin-top: 40px;
+}
+#dycalendar table tr:nth-child(1) td 
+{
+	background: #e0d6ff;
+	color: black;
+	border-radius: 10px;
+	font-weight: 600;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.1),
+	-5px -5px 10px #fff;
+	border: 2px solid #edf1f4;
+}
+	
+
+#dycalendar table tr:nth-child(1) td:nth-child(1)
+{
+	background: #EE4B2B;
+}
+
+#dycalendar table tr:nth-child(1) td:nth-child(7)
+{
+	background: #EE4B2B;
+}
+
+#dycalendar table td 
+{
+	color: black;
+	padding: 10px 15px;
+	cursor: pointer;
+	font-weight: 900;
+	border-radius: 10px;
+	font-size: 1.25em;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.1),
+	-5px -5px 10px rgba(255,255,255,1);
+	
+	/* box-shadow: inset 5px 5px 10px rgba(0,0,0,0.1),
+	inset -5px -5px 10px rgba(255,255,255,1); */
+}
+#dycalendar table td:hover 
+{
+	box-shadow: inset 5px 5px 10px rgba(0,0,0,0.1),
+	inset -5px -5px 10px rgba(255,255,255,1);
+	/* box-shadow: 5px 5px 10px rgba(0,0,0,0.1),
+	-5px -5px 10px rgba(255,255,255,1); */
+}
+#dycalendar table td:first-child 
+{
+	color: #EE4B2B;
+	font-weight: 900;
+}
+
+#dycalendar table td:last-child
+{
+	color: #EE4B2B;
+	font-weight: 900;
+}
+
+.dycalendar-month-container .dycalendar-target-date 
+{
+	background: #EE4B2B;
+	color: #fff !important;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.1),
+	-5px -5px 10px rgba(255,255,255,1) !important;
+	border: 2px solid #edf1f4;
+}
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.prev-btn
+{
+	width: 45px;
+	height: 45px;
+	font-size: 2em;
+	left: 15px;
+	color: black;
+	background: #ADD8E6;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.1),
+	-5px -5px 10px rgba(255,255,255,1);
+}
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.next-btn
+{
+	width: 45px;
+	height: 45px;
+	font-size: 2em;
+	right: 15px;
+	color: black;
+	background: #ADD8E6;
+	border-radius: 10px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,0.1),
+	-5px -5px 10px rgba(255,255,255,1);
+}
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.prev-btn:active ,
+.dycalendar-month-container .dycalendar-header .dycalendar-prev-next-btn.next-btn:active 
+{
+	box-shadow: inset 5px 5px 10px rgba(0,0,0,0.1),
+	inset -5px -5px 10px rgba(255,255,255,1);
+}
+.dycalendar-span-month-year 
+{
+	color: #7F00FF;
+	font-size: 2em;
+	font-weight: 600;
+}

@@ -1,0 +1,47 @@
+Changews to index.php, I must add
+
+ function colorSet($value){
+
+        $color="";
+
+        if($value > 0){
+            $color="lime;font-weight:bold";
+        }
+        else if($value < 0){
+            $color="red;font-weight:bold";
+        }
+        else{
+           $color="#FFF00;font-weight:bold";
+			
+        }
+
+        return $color;
+    }
+	
+	
+	<link rel="icon" type="image/vnd.microsoft.icon" href="./favicon.ico" />
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css'>
+    <link rel="stylesheet" href="./assets/css/tablesort.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+	
+	
+	
+	
+	<body>
+   
+    <center>
+		
+        <img src="./favicon.ico" width="32" height="32">
+		<form action="../../Index.html" target="_blank"><button type="submit">Main</button></form>
+    </center>
+	
+	
+	
+	 <td><input class="total-usd glow" type="text" id="<?php echo $COINGECKO_ID; ?>1" name="result5" value="<?php echo $multiply11; ?>" style="color:lime; background-color:black; font-weight:bold"/></td>
+	 
+	 
+	   <td><input class="total-usd glow" type="text" id="<?php echo $COIN_ID; ?>1" name="result5" value="<?php echo $multiply1; ?>" style="color:lime; background-color:black; font-weight:bold"/></td>
+	   
+	   
+	   
+	   

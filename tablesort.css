@@ -1,0 +1,147 @@
+
+body {
+	font-family: 'Red Hat Display', sans-serif;
+	height: 100vh;
+	margin: 0;
+	color: Lime;
+	font-size: x-large;
+	background: radial-gradient(circle, #06cef6, #196986, #1b2949, #000);
+	font-weight: 900;
+	perspective: 2000px;
+}
+  
+.table-sortable {
+	font-family: Kaushan Script;
+	margin: auto;
+  	border-spacing: 0px;
+	box-shadow: 5px 4px 30px rgba(0,0,0,.10);
+	background: #7F00FF;
+	transition: all .5s;
+	position: relative;
+    overflow: scroll;
+    width: 80vw;
+    border-radius: 0.25em;
+}
+
+.table-sortable thead {
+	background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+	border-radius: 10px 10px 0 0;
+}
+
+.table-sortable tfoot {
+	background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+	border-radius: 10px 10px 0 0;
+}
+  .table-sortable th {
+	font-weight: bold;
+	border: 1px solid #DFCFBE;
+    font-size: 20px;
+	padding: 0px;
+	margin: 0;
+	 color: #A0DAA9;
+	 cursor: pointer;
+}
+  
+th:first-child, th:first-child {
+    color: green;
+}
+th:nth-child(1), th:nth-child(1) {
+    color: white;
+	font-weight: bold;
+}
+th:nth-child(2), th:nth-child(2) {
+    color: black;
+	font-weight: bold;
+}
+th:nth-child(3), th:nth-child(3) {
+    color: black;
+	font-weight: bold;
+}
+th:nth-child(4), th:nth-child(4) {
+    color: black;
+	font-weight: bold;
+}
+th:nth-child(5), th:nth-child(5) {
+    color: black;
+	font-weight: bold;
+}
+th:nth-child(6), th:nth-child(6) {
+    color: white;
+	font-weight: bold;
+}
+th:nth-child(7), th:nth-child(7) {
+    color: white;
+	font-weight: bold;
+}
+th:nth-child(8), td:nth-child(8) {
+    color: white;
+	font-weight: bold;
+}
+th:nth-child(9), th:nth-child(9) {
+    color: white;
+	font-weight: bold;
+}
+th:nth-child(10), th:nth-child(10) {
+    color: white;
+}
+th:nth-child(11), th:nth-child(11) {
+    color: white;
+	font-weight: bold;
+}
+th:nth-child(12), th:nth-child(12) {
+    color: white;
+	font-weight: bold;
+}
+th:last-child, th:last-child {
+    font-weight: bold;
+	color: white;   
+}
+
+.table-sortable .th-sort-asc::after {
+	content: "\25b4";
+  }
+
+.table-sortable .th-sort-desc::after {
+	content: "\25be";
+}
+
+.table-sortable .th-sort-asc::after,
+.table-sortable .th-sort-desc::after {
+  margin-left: 5px;
+}
+
+.table-sortable .th-sort-asc,
+.table-sortable.th-sort-desc {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.table-sortable td {
+	border: 1px solid #DFCFBE;
+    padding: 15px 15px;
+	margin: 0%;
+	color: #fff;
+	font-size: 20px;
+	width: calc(100%/13);
+    box-sizing: border-box;
+}
+
+.table-sortable td:last-child {
+  border-right: none;
+}
+   
+.table-sortable td:first-of-type {
+			border-radius: 10px 0 0 0;
+}
+		
+.table-sortable	td:last-of-type {
+			border-radius: 0 10px 0 0;
+}
+
+.table-sortable tbody {
+			border-top: 1px solid #f0f0f0;
+}
+		
+
+
+
+

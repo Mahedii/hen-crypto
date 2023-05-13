@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body 
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    min-height: 100vh;
+    background: #1f2028;
+}
+section
+{
+    position: relative;
+    width: 100%;
+    
+}
+section .waves 
+{
+    
+/*    height: 100vh; /* set the height of the container element to be equal to the viewport height */
+    position: relative; /* set the position property to relative so that the absolute position of the waves is relative to this container element */
+    z-index: 5;  
+}
+
+section .waves .wave
+{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background: url(./assets/images/wave.png);
+    background-size: 1000px 100px;
+    background-repeat: no-repeat;   /* https://www.w3.org/TR/css-backgrounds-3/#layering */
+    background-attachment;
+    background-position: bottom;
+}
+section .wave#wave1
+{
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animate 4s linear infinite;
+}
+section .wave#wave2
+{
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animate2 4s linear infinite;
+}
+section .wave#wave3
+{
+    z-index: 998;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animate 2s linear infinite;
+}
+section .wave#wave4
+{
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animate2 2s linear infinite;
+}
+
+@keyframes animate
+{
+    0%,100%
+    {
+        background-position-x: 1000px;
+    }
+    100%
+    {
+        background-position-x: 0px;
+    }
+}
+@keyframes animate2
+{
+    0%,100%
+    {
+        background-position-x: 0px;
+    }
+    100%
+    {
+        background-position-x: 1000px;
+    }
+}
+.island 
+{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 53vw;
+    height: 75vh;
+    bottom: 0px;
+    z-index: 10;
+  /*  pointer-events: none; */
+}
+.stars
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  /*  pointer-events: none; */
+    mix-blend-mode: screen;
+}
+h2 
+{
+    position: absolute;
+    bottom: 60vh;
+    transform: translateY(50%);
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 10em;
+    font-weight: 800;
+    text-transform: uppercase;
+    z-index: 10;
+}
+h1 {
+    font-size: 40px;
+    margin: 50px 0;
+}
+
+/* Styles the form container */
+form {
+    position: fixed;
+    top: 0;
+    margin: 0 auto; /* centers the form */
+    max-width: 500px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 5px solid #800080; /* dark purple */
+    z-index: 50; /* bring the form container in front of the island */
+    pointer-events: auto; /* enable click events */
+}
+
+/* Styles the labels for form inputs */
+label {
+    display: block;
+    margin: 10px 0;
+    text-align: left;
+    font-size: 20px;
+    color: #333333; /* dark gray */
+}
+
+/* Styles the file input */
+input[type="file"] {
+    background-color: #FF69B4; /* pink */
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    margin: 30px 0;
+}
+
+/* Styles the submit button */
+input[type="submit"] {
+    background-color: #FF69B4; /* pink */
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+}
+
+/* Styles the text input */
+input[type="text"] {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 2px solid #ccc; /* light gray */
+    width: 100%;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* Styles the label for the "description" input */
+label[for="description"] {
+    color: #023020; /* dark green */
+}
+
+/* Styles the label for the "value" input */
+label[for="value"] {
+    color: #00FFFF; /* light blue */
+}
