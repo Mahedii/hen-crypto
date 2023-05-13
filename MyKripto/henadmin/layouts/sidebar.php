@@ -79,7 +79,7 @@
                                 <a href="http://localhost/mykripto/henadmin/coinDetails.php?COINMARKETCAP_ID=2900&COIN_SYMBOL=BabyDoge&lccl_id=23656" class="nav-link">BabyDogecoin</a>
                             </li>
 							 <li class="nav-item">
-                                <a href="http://localhost/mykripto/henadmin/coinDetails.php?COINMARKETCAP_ID=20836&COIN_SYMBOL=DADDYDOGE&lccl_id=23647" class="nav-link">DaddyDoge</a>
+                                <a href="http://localhost/mykripto/henadmin/coinDetails.php?COINMARKETCAP_ID=20836&COIN_SYMBOL=DADDYDOGE&lccl_id=23647" class="nav-link">Daddy Doge</a>
                             </li>
                         </ul>
                     </div>
