@@ -1,0 +1,73 @@
+div.menu {
+	display: none;							/* Default menu display is hidden - the top menu must be explicitly displayed (or equivalently, marked with class 'top') */
+	color: purple;							/* Text menu color */
+	background-color: rgba(128,0,128,0.2);		/* Use rgba(0,0,0,0) to see background, or set a specific color or gradient (using rgba(0,0,0,0) instead of 'transparent' or not specifying at all eliminates an IE bug */
+
+	/*  Other nice options */
+	border: 2px solid #565656;			/* Menus/submenus can have borders */
+	box-shadow: 2px 2px 2px grey;		/* A box-shadow looks nice when combined with border */
+	/* background: linear-gradient(#000000, #555555); /* A nice linear gradient */
+	 font-family: Calibri;				/* Set the font-face */
+	/* font-size: 20pt;						/* And the font-size */
+}
+div.top {
+	display: inline-block;					/* The top-level menu is usually visible to start, so mark that one with .top, or explicitly show */
+}
+div.top.hmb > div.item {					/* If top-level menu is horizontal, display the items as inline-block to allow horizontal stacking */
+	display: inline-block;
+}
+div.menu > div.item {						/* Common settings for all menu items (including sub-menus) */
+	white-space: nowrap;					/* Make sure no word-wrapping */
+	cursor: pointer;						/* Finger pointer instead of arrow pointer */
+	padding: 5px 10px;						/* Use this to put spacing between menu items...  IMO better than margin because you don't have to hover directly on top of the text */
+	margin: 0;								/* No spacing between menu-item divs (spacing is provided via padding above) */
+
+	border-top: 4px solid transparent;		/* This example menu will use a border-top highlight, so put a transparent border there so the menu items don't move as you hover */
+}
+div.menu > div.item:hover {					/* Common settings for all menu items when hovered (including sub-menus): */
+	background-color: #1111111;				/* Give a little bit of shading to hovered item */
+	border-top: 4px solid #009ac7;			/* And give a nice clear blu-ish highlight above the item */
+}
+
+/*  Adjust the exact display and positions of sub-menus  */
+div.hmb > div.item:hover > div.vmb {		/* Horizontal menu w/ vertical sub-menu */
+	position: absolute;						/* Allows the display of sub-menu to not cause the source menu item to change width */
+	display: block;							/* Display the sub-menu beneath the menu item */
+	margin-top: 5px;						/* Move the sub-menu down 5px (for exact alignment, this should match the first 'padding' value in "div.menu > div.item".  If too large, menu may disappear as mouse moves */
+	margin-left: -10px;						/* Move the sub-menu left 10px (for exact alignment, this should be the negative of the first 'padding' value in "div.menu > div.item".  */
+}
+
+div.hmb > div.item:hover > div.hmb {		/* Horizontal menu w/ horizontal sub-menu */
+	position: absolute;						/* Allows the display of sub-menu to not cause the source menu item to change height, and with a dynamic width */
+	display: block;							/* Display the sub-menu beneath the menu item */
+	margin-top: 5px;						/* Move the sub-menu down 5px (for exact alignment, this should match the first 'padding' value in "div.menu > div.item".  If too large, menu may disappear as mouse moves */
+}
+
+div.vmb > div.item:hover > div.vmb {		/* Vertical menu w/ vertical sub-menu */
+	position: absolute;						/* Allows the display of sub-menu to not cause the source menu item to change height */
+	display: inline-block;					/* Display the sub-menu to the right of the menu item */
+	margin-left: 6px;						/* Move the sub-menu right 10px (for exact alignment, this should match the second 'padding' value in "div.menu > div.item".  If too large, menu may disappear as mouse moves */
+}
+
+div.vmb > div.item:hover > div.hmb {		/* Vertical menu w/ horizontal sub-menu */
+	position: absolute;						/* Allows the display of sub-menu to not cause the source menu item to change height */
+	display: inline-block;					/* Display the sub-menu to the right of the menu item */
+	margin-left: 6px;						/* Move the sub-menu right 6px (for exact alignment, this should match the second 'padding' value in "div.menu > div.item".  If too large, menu may disappear as mouse moves */
+}
+
+div.item:hover > div.hmb > div.item {		/* Horizontal hovered menu items */
+	display: inline-block;					/* Display as inline-block to allow horizontal stacking */
+}
+
+div.menu > div.item > a {					/* A elements inside the menu items */
+	color: inherit;							/* No special coloring - take the same color style as the div */
+	text-decoration: none;					/* No special underlining typical of A */
+	
+.iconzx {
+    background: url('file:///C:/MyLinks1/Images/zx.png');
+    height: 20px;
+    width: 20px;
+    display: block;
+    /* Other styles here */
+}
+			
