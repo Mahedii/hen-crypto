@@ -1,0 +1,20 @@
+1.  Download Xammp version 7.4.29 PHP 7.4.29 from This website  https://www.apachefriends.org/download.html
+2.  Install
+3.  Open Xammp and change the following file
+
+	3.1	Click on Apache Config button and click on Apache(apached.conf)
+	
+		Change the following lines
+			252   from  DocumentRoot "C:/xammp/apache/config"  to    DocumentRoot "C:/mylinks"
+			253   from  <Directory "C:/xammp/apache/config">   to    <Directory "C:/mylinks">
+			
+			
+	3.2 Go to folder C:\xampp\apache\conf\extra and open httpd-ssl.conf		
+	
+		Change and add the following
+			125    from  ServerName www.example.com:443  to #ServerName www.example.com:443
+			126		add this in line 126   Servername localhost
+			
+	3.3 in xampp menu start Apache and Mysql
+	
+			

@@ -1,0 +1,229 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+body{
+width: 100%;
+height: 100vh;
+background: radial-gradient(circle, #F5F5F5, #FFFFF0, #F0FFF0, #FFFAFA);
+display: grid;
+justify-content: center;
+
+}
+
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* container */
+.containera{
+	width: 230px;
+	border-radius: 20px;
+	height: 100px;
+	background: #1e1e1e;	
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	position: relative;
+	overflow: hidden;
+	
+}
+.containera span{
+color: #fff;
+font-size: 30px;
+font-weight: bold;
+font-family: Consolas, monaco, monospace;
+z-index: 1;
+}
+.containera::before{
+content: '';
+position: absolute;
+width: 40px;
+height: 300px;
+left: 75px;
+top: -100px;
+background: linear-gradient(#00e5ff, #b400fb);
+animation: animate 2s linear infinite;
+}
+	
+@keyframes animate{
+	0%{
+		transform: rotate(0deg);
+	}100%{
+		transform: rotate(360deg);
+	}	
+}
+.containera::after{
+	content: '';
+	position: absolute;
+	inset: 5px;
+	background: #29303f;
+	border-radius: 18px;
+}
+
+/* containerb */
+.containerb{
+	width: 230px;
+	border-radius: 20px;
+	height: 100px;
+	background: #1e1e1e;	
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	position: relative;
+	overflow: hidden;
+}
+.containerb span{
+color: #fff;
+font-size: 30px;
+font-weight: bold;
+font-family: Consolas, monaco, monospace;
+z-index: 1;
+}
+.containerb::before{
+content: '';
+position: absolute;
+width: 40px;
+height: 300px;
+left: 75px;
+top: -100px;
+background: linear-gradient(lime, red);
+animation: animate 2s linear infinite;
+}
+.containerb::after{
+	content: '';
+	position: absolute;
+	inset: 5px;
+	background: #29303f;
+	border-radius: 18px;
+}
+
+/* containerc */
+.containerc{
+	width: 230px;
+	border-radius: 20px;
+	height: 100px;
+	background: #1e1e1e;	
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	position: relative;
+	overflow: hidden;
+	
+}
+.containerc span{
+color: #fff;
+font-size: 30px;
+font-weight: bold;
+font-family: Consolas, monaco, monospace;
+z-index: 1;
+}
+.containerc::before{
+content: '';
+position: absolute;
+width: 40px;
+height: 300px;
+left: 75px;
+top: -100px;
+background: linear-gradient(#49fb35, #E6FB04);
+animation: animate 2s linear infinite;
+}
+.containerc::after{
+	content: '';
+	position: absolute;
+	inset: 5px;
+	background: #29303f;
+	border-radius: 18px;
+}
+
+/* containerd */
+.containerd{
+	width: 230px;
+	border-radius: 20px;
+	height: 100px;
+	background: #1e1e1e;	
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	position: relative;
+	overflow: hidden;
+}
+.containerd span{
+color: #fff;
+font-size: 30px;
+font-weight: bold;
+font-family: Consolas, monaco, monospace;
+z-index: 1;
+}
+.containerd::before{
+content: '';
+position: absolute;
+width: 40px;
+height: 300px;
+left: 75px;
+top: -100px;
+background: linear-gradient(#FFFF00, #0033FF);
+animation: animate 2s linear infinite;
+}
+.containerd::after{
+	content: '';
+	position: absolute;
+	inset: 5px;
+	background: #29303f;
+	border-radius: 18px;
+}
+
+
+/* containere */
+.containere{
+	width: 500px;
+	border-radius: 20px;
+	height: 490px;
+	background: #1e1e1e;	
+	display: grid;
+	justify-content: center;
+	align-content: center;
+	position: relative;
+	overflow: hidden;
+}
+.containere span{
+color: #fff;
+font-size: 30px;
+font-weight: bold;
+font-family: Consolas, monaco, monospace;
+z-index: 1;
+}
+.containere::before{
+content: '';
+position: absolute;
+width: 400px;
+height: 600px;
+left: 75px;
+top: -100px;
+background: linear-gradient(#FFFF00, #0033FF);
+animation: animate 2s linear infinite;
+}
+.containere::after{
+	content: '';
+	position: absolute;
+	inset: 5px;
+	background: #29303f;
+	border-radius: 18px;
+}
+
+.col-2 {
+   font-size: 1.8vw;
+   font-weight: 700;
+   width: 440px;
+   position: center;
+  }
+
+ .uit {
+        background-image: linear-gradient(to left, Lime, DarkCyan, Crimson, MediumVioletRed, DarkOrange, Fuchsia, DarkSlateBlue, SteelBlue, MediumBlue);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        color: transparent;
+ }
